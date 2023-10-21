@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    font-size: 20px;
+    padding: 10px 0;
+    justify-content: space-between;
+    cursor: pointer;
+    
+    &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
+
+    button {
+        color: rgb(255, 50, 50);
+        span {
+            font-size: 20px;
+        }
+    }
+
+    &.status-done {
+        text-decoration: line-through;
+    }
+}

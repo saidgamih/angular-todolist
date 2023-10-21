@@ -1,0 +1,9 @@
+<div *ngIf="items.length > 0; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <app-todo-item *ngFor="let item of items" [item]="item" (removeItemEvent)="removeItem(item.id)" (click)="changeItemStatus(item.id)" [ngClass]="{'status-done': item.done}"></app-todo-item>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class="empty-list-message">Empty todo list !</div>
+</ng-template>
