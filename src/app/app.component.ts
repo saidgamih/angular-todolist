@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       text,
       done: false
     };
-    this.items.push(item);
+    this.items.unshift(item);
     this.storageService.persisteDataInStorage(this.items);
   }
 
