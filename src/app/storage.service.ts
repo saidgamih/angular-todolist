@@ -7,15 +7,10 @@ export class StorageService {
 
   loadDataFromStorage(): any[] {
     let data = localStorage.getItem("saysu_do_list");
-    if(data) {
-      return JSON.parse(data);
-    } else {
-      return [];
-    }
+    return data ? JSON.parse(data) : [];
   }
 
   persisteDataInStorage(items: any[]) : void {
-    let data = JSON.stringify(items);
-    localStorage.setItem("saysu_do_list", data);
+    localStorage.setItem("saysu_do_list", JSON.stringify(items));
   }
 }
