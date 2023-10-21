@@ -17,4 +17,10 @@
             color: #9341ff;
         }
     }
+
+    @media (max-width: 767px) { 
+        border-radius: 0;
+        height: calc(100vh - 25px);
+        border-top: 5px solid #9341ff;
+    }
 }
