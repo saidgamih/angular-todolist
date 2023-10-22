@@ -1,4 +1,5 @@
 <form (submit)="submitForm()">
-    <input type="text" [(ngModel)]="todo" [ngModelOptions]="{standalone: true}" placeholder="What the thing you want to do  ?">
-    <button>+</button>
+    <input type="text" [(ngModel)]="todo" [ngModelOptions]="{standalone: true}"
+        placeholder="What the thing you want to do  ?" #todoInput>
+    <button><span class="material-symbols-outlined">add</span></button>
 </form>

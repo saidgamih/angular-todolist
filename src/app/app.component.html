@@ -1,5 +1,6 @@
 <header>
-  <h1>SyasuDo</h1>
+  <h1>NGDO</h1>
+  <app-todo-meta [items]="items"></app-todo-meta>
 </header>
 <app-todo-form (newItemEvent)="addItem($event)"></app-todo-form>
 <app-todo-list [items]="items" (removeItemEvent)="removeItem($event)" (changeItemStatusEvent)="changeItemStatus($event)"></app-todo-list>
